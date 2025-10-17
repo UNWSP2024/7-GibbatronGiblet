@@ -29,12 +29,13 @@ def main():
 # in the list that are greater than the number.
 def display_larger_than_n_list(n, n_list):
     list1 = list(n_list)
-    print('In display_larger_than_n_list')
+    larger_than_n_list = []
     for number in list1:
         if number <= n:
             continue
         elif number > n:
-            print(number)
+            larger_than_n_list.append(number)
+    print(larger_than_n_list)
 
         
 # Call the main function.
