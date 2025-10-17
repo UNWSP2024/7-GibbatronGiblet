@@ -1,25 +1,32 @@
 # Program #3: US_Population
 def main():
-    # Have the user input (using a loop) various information that contains three pieces of data: 
-    # year, name of state, and population.  
-    # Store all of this information in a list of lists.  For example it might be stored like this:
-    
-    # [[2010, "Maine", 1987435], [2010,"Minnesota",6873202], [2011, "Iowa", 3421988]]
-    all_entered_values = []
+    value_count = int(input("How many population values do you want to enter?"))
+    master_list = []
+    for population_list in range(value_count):
+        population_list = []
+        year = int(input("Enter year number: "))
+        state = input("Enter state name: ")
+        population = int(input("Enter population value: "))
+        population_list.append(year)
+        population_list.append(state)
+        population_list.append(population)
+        master_list.append(population_list)
 
-    # Now have the user enter a year. 
-    
-    # The program will add the populations from all states in the list of list for that year only.
-    # Pass the list and year to the sum_population_for_year
-
-def sum_population_for_year(all_entered_values, year_to_sum):
-    # Loop through and sum the populations for the appropriate year. 
-    # e.g. for the list on line 7 the total would be 8,860,637 if the user enterd 2010 for the year to sum,
-    # or 3,421,988 if they enterd 2011 for the year to sum.
-
-    # print the totalled population
+    print("These are the values you have entered:",master_list)
+    sum_year = int(input("What year do you want the total population for?"))
+    print("This year's population is", sum_population_for_year(master_list, sum_year))
 
 
-# Call the main function.
-if __name__ == '__main__':
+def sum_population_for_year(master_list, sum_year):
+    meta_list = list(master_list)
+    total_population = 0
+    for item in meta_list:
+        if item[0] == sum_year:
+            total_population += item[2]
+    return total_population
+
+if __name__ == "__main__":
     main()
+
+#This program was written on 10/17/25 by Logan Gibson
+#Its name is "Adding State Populations"
