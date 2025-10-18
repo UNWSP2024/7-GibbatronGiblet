@@ -39,7 +39,8 @@ def display_larger_than_n_list(n, n_list):
 
         
 # Call the main function.
-main()
+if __name__ == "__main__":
+    main()
 
 #This program was written on 10/17/25 by Logan Gibson
 #Its name is "Greater Than Some Number"
