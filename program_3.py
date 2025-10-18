@@ -16,7 +16,7 @@ def main():
 
     print("These are the values you have entered:",all_entered_values)
     year_to_sum = int(input("What year do you want the total population for?"))
-    print(f"{year_to_sum}'s population is {sum_population_for_year(all_entered_values, year_to_sum)}.")
+    sum_population_for_year(all_entered_values, year_to_sum)
 
 
 def sum_population_for_year(all_entered_values, year_to_sum):
@@ -25,7 +25,7 @@ def sum_population_for_year(all_entered_values, year_to_sum):
     for item in meta_list:
         if item[0] == year_to_sum:
             total_population += item[2]
-    return total_population
+    print(f"The year {year_to_sum}'s total population is {total_population}.")
 
 if __name__ == "__main__":
     main()
