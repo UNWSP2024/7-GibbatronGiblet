@@ -1,20 +1,22 @@
 # Program #3: US_Population
 def main():
-    value_count = int(input("How many population values do you want to enter?"))
+    value_count = 3
     master_list = []
     for population_list in range(value_count):
         population_list = []
-        year = int(input("Enter year number: "))
-        state = input("Enter state name: ")
-        population = int(input("Enter population value: "))
+        rep_number = 1
+        year = int(input(f"Enter year {rep_number}'s number: "))
+        state = input(f"Enter state {rep_number}'s name: ")
+        population = int(input(f"Enter population {rep_number}'s value: "))
         population_list.append(year)
         population_list.append(state)
         population_list.append(population)
         master_list.append(population_list)
+        rep_number += 1
 
     print("These are the values you have entered:",master_list)
     sum_year = int(input("What year do you want the total population for?"))
-    print("This year's population is", sum_population_for_year(master_list, sum_year))
+    print(f"This year's population is {sum_population_for_year(master_list, sum_year)}.")
 
 
 def sum_population_for_year(master_list, sum_year):
