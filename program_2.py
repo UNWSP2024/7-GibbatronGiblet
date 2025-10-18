@@ -25,12 +25,22 @@ def main():
     display_larger_than_n_list(number, number_list)
 
 # The display_larger_than_n_list function accepts two arguments:
-# a list, and a number. The function displays all of the numbers
+# a list, and a number. The function displays all the numbers
 # in the list that are greater than the number.
 def display_larger_than_n_list(n, n_list):
-    # Write your code to display all of the numbers in the list that are greater than then number n. below
-    print('In display_larger_than_n_list')
+    list1 = list(n_list)
+    larger_than_n_list = []
+    for number in list1:
+        if number <= n:
+            continue
+        elif number > n:
+            larger_than_n_list.append(number)
+    print(larger_than_n_list)
+
         
 # Call the main function.
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
+
+#This program was written on 10/17/25 by Logan Gibson
+#Its name is "Greater Than Some Number"
